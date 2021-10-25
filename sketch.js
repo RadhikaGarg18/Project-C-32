@@ -53,8 +53,9 @@ function draw(){
     pin8.display();
     pin9.display();
     pin10.display();
-    ball.display();
     slingShot.display();
+    ball.display();
+    
     
 }
 function mouseDragged(){

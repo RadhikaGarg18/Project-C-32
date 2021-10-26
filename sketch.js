@@ -7,6 +7,7 @@ var engine, world;
 var ground,platform;
 var pin1,pin2,pin3,pin4,pin5,pin6,pin7,pin8,pin9,pin10;
 var slingShot;
+var score = 0;
 
 function preload() {
     backgroundImg = loadImage("bowling.jpg");
@@ -16,7 +17,7 @@ function setup(){
     var canvas = createCanvas(1000,400);
     engine = Engine.create();
     world = engine.world;
-
+    
     ground = new Ground(500,380,1000,20);
     platform = new Ground(100,290,350,170);
 
@@ -32,6 +33,7 @@ function setup(){
     pin10 = new Pin(790,60,100,80);
     ball = new Ball(200,200);
     slingShot =new SlingShot(ball.body,{x: 150 , y: 100});
+    
 }
 
 function draw(){
@@ -41,18 +43,29 @@ function draw(){
     stroke("black");
     strokeWeight(5);
     text("Press space bar to redo",50,50)
+    text("Score  " + score, 300, 50)
     ground.display();
     platform.display();
     pin1.display();
+    pin1.score();
     pin2.display();
+    pin2.score();
     pin3.display();
+    pin3.score();
     pin4.display();
+    pin4.score();
     pin5.display();
+    pin5.score();
     pin6.display();
+    pin6.score();
     pin7.display();
+    pin7.score();
     pin8.display();
+    pin8.score();
     pin9.display();
+    pin9.score();
     pin10.display();
+    pin10.score();
     slingShot.display();
     ball.display();
     
